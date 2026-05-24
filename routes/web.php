@@ -269,6 +269,13 @@ Route::middleware(['auth'])
     // simpan pinjam
     Route::post('/peminjaman/store', [PeminjamanController::class, 'store'])
         ->name('peminjaman.store');
+
+
+     // ✅ FIX RIWAYAT (INI HARUS DI SINI)
+    Route::get('/riwayat', [RiwayatController::class, 'index'])
+        ->name('riwayat.index');
+
 });
 
-    Route::get('/riwayat', [RiwayatController::class, 'index']);
+
+
