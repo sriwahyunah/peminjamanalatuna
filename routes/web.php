@@ -45,6 +45,7 @@ use App\Http\Controllers\Petugas\AlatController as PetugasAlatController;
 use App\Http\Controllers\Peminjam\DashboardController as PeminjamDashboard;
 use App\Http\Controllers\Peminjam\AlatController as PeminjamAlatController;
 use App\Http\Controllers\Peminjam\PeminjamanController as PeminjamanPeminjamanController;
+use App\Http\Controllers\Peminjam\RiwayatController;
 
 
 
@@ -269,3 +270,5 @@ Route::middleware(['auth'])
     Route::post('/peminjaman/store', [PeminjamanController::class, 'store'])
         ->name('peminjaman.store');
 });
+
+    Route::get('/riwayat', [RiwayatController::class, 'index']);
